@@ -22,7 +22,7 @@ public class Tutor {
      */
     public Tutor(String nome, String telefone, String endereco){
         this.nome = nome;
-        this.telefone = telefone;
+        setTelefone(telefone);
         this.endereco = endereco;
     }
 
@@ -75,7 +75,7 @@ public class Tutor {
      * @throws IllegalArgumentException caso o telefone seja null
      */
     public void setTelefone(String telefone){
-        if(telefone == null){
+        if(telefone == null | telefone.isEmpty()){
             throw new IllegalArgumentException("Telefone não pode ser nullo!");
         }
         this.telefone = telefone;
