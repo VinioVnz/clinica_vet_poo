@@ -41,7 +41,7 @@ public class Animal {
     public Animal(String nome, String especie, int idade, String historico) {
         this.nome = nome;
         this.especie = especie;
-        this.idade = idade;
+        setIdade(idade);
         this.historico = historico;
     }
 
