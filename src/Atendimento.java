@@ -2,10 +2,10 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Atendimento {
-    private String data;
+    protected String data;
     private String descricao;
-    private Veterinario veterinario;
-    private Animal animal;
+    protected Veterinario veterinario;
+    protected Animal animal;
     ArrayList<Procedimento> procedimentos = new ArrayList<>();
 
     
@@ -44,7 +44,19 @@ public class Atendimento {
         procedimentos.add(procedimento);
         this.animal = animal;
     }
-
+    /**
+     * 
+     * @param procedimento
+     */
+    public void registar(){
+        System.out.println("Consulta registrada para "+animal.getNome() +"com o veterinário "+veterinario.getNome());
+    }
+    public String getAnimalName(){
+        return animal.getNome();
+    }
+    public String getVeterinarioName(){
+        return veterinario.getNome();
+    }
     /**
      * metodo para add procedimento
      * @param procedimento, o procedimento
